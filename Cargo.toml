@@ -1,0 +1,21 @@
+[package]
+name = "api-gateway"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net"] }
+hyper = { version = "1", features = ["full"] }
+hyper-util = { version = "0.1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_yaml = "0.9"
+http = "1"
+http-body = "1"
+bytes = "1"
+http-body-util = "0.1"
+parking_lot = "0.12"
+libc = "0.2"
+
+[[bin]]
+name = "gateway"
+path = "src/main.rs"
